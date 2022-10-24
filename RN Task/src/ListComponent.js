@@ -29,10 +29,6 @@ function List() {
   }, []);
 
   const searchFilter = (text) => { 
-    if(text == ' ' ) { 
-        setData (masterData)
-    } 
-    else {
       const newData  = masterData.filter (item => 
       item.login.toLowerCase().includes(text.toLowerCase()))
       if( newData.length > 0 ) { 
@@ -41,7 +37,7 @@ function List() {
       else {
           setData ( [ {'login': ' No data found '} ] )
       }
-    }
+
       setSearch(text) 
   }
 
