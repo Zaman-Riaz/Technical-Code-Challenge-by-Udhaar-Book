@@ -110,6 +110,7 @@ function List() {
             return (
               <TouchableOpacity
                 style={styles.mainContainer}
+                key={index}
                 onPress={() => { onClick(item) }}>
               <Image
                 style={styles.picture}
